@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[STEP1]]>
+    </line>
+    <line>
+      <![CDATA[STEP2]]>
+    </line>
+    <line>
+      <![CDATA[STEP3]]>
+    </line>
+  </reporter-output>
+  <suite name="Localization testing Demo" duration-ms="27634" started-at="2017-07-21T12:58:56Z" finished-at="2017-07-21T12:59:24Z">
+    <groups>
+    </groups>
+    <test name="Test Subscribe Functionality" duration-ms="27634" started-at="2017-07-21T12:58:56Z" finished-at="2017-07-21T12:59:24Z">
+      <class name="com.adp.bi.tests.TestLocalization">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.adp.bi.tests.TestLocalization@614df0a4]" name="setUp" is-config="true" duration-ms="57" started-at="2017-07-21T18:28:56Z" finished-at="2017-07-21T18:28:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSubscribe(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.adp.bi.tests.TestLocalization@614df0a4]" name="testSubscribe" duration-ms="27454" started-at="2017-07-21T18:28:56Z" description="Verify Subscribe Functionality " data-provider="testSubscribe" finished-at="2017-07-21T18:29:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Chinese]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[first]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[femail]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[STEP1]]>
+            </line>
+            <line>
+              <![CDATA[STEP2]]>
+            </line>
+            <line>
+              <![CDATA[STEP3]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSubscribe -->
+      </class> <!-- com.adp.bi.tests.TestLocalization -->
+    </test> <!-- Test Subscribe Functionality -->
+  </suite> <!-- Localization testing Demo -->
+</testng-results>

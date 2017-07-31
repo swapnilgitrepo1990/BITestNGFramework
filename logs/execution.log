@@ -1,0 +1,169 @@
+2017/07/21 18:20:27.282 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:20:27.287 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:20:27.287 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:20:27.288 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:20:27.290 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:20:27.291 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:20:28.159 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:20:28.160 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:20:28.217 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:20:28.263 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:20:32.284 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:20:37.770 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\TestData.xlsx With Sheet Name testSubscribe
+2017/07/21 18:20:37.813 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:20:37.881 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\Locators\Chinese\Chinese.properties
+2017/07/21 18:20:37.885 [ INFO] main (Config.java) - Locators loaded successfully for Chinese language
+2017/07/21 18:20:37.885 [ INFO] main (TestLocalization.java) - Test Subscribe execution started
+2017/07/21 18:20:37.887 [ INFO] main (TestLocalization.java) - Language set for testing is :-Chinese
+2017/07/21 18:20:51.475 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:20:53.494 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:20:53.495 [ INFO] main (TestLocalization.java) - Page loaded successfully
+2017/07/21 18:21:01.645 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:21:03.657 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:21:03.658 [ INFO] main (TestLocalization.java) - Selected language page loaded successfully
+2017/07/21 18:21:04.082 [ INFO] main (TestLocalization.java) - ******Test Subscribe Test Case passed*****
+2017/07/21 18:21:06.068 [ INFO] main (Config.java) - Execution completed
+2017/07/21 18:21:07.435 [ INFO] main (Config.java) - Driver closed successfully
+2017/07/21 18:23:07.983 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:23:07.987 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:23:07.987 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:23:07.987 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:23:07.989 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:23:07.989 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:23:08.811 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:23:08.811 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:23:08.867 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:23:08.902 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:23:12.907 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:23:14.148 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\TestData.xlsx With Sheet Name testSubscribe
+2017/07/21 18:23:14.195 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:23:14.269 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\Locators\Chinese\Chinese.properties
+2017/07/21 18:23:14.270 [ INFO] main (Config.java) - Locators loaded successfully for Chinese language
+2017/07/21 18:23:14.271 [ INFO] main (TestLocalization.java) - Test Subscribe execution started
+2017/07/21 18:23:14.273 [ INFO] main (TestLocalization.java) - Language set for testing is :-Chinese
+2017/07/21 18:23:26.749 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:23:28.764 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:23:28.765 [ INFO] main (TestLocalization.java) - Page loaded successfully
+2017/07/21 18:24:04.151 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:24:06.164 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:24:06.165 [ INFO] main (TestLocalization.java) - Selected language page loaded successfully
+2017/07/21 18:24:06.612 [ INFO] main (TestLocalization.java) - ******Test Subscribe Test Case passed*****
+2017/07/21 18:24:08.478 [ INFO] main (Config.java) - Execution completed
+2017/07/21 18:24:09.810 [ INFO] main (Config.java) - Driver closed successfully
+2017/07/21 18:24:36.618 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:24:36.621 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:24:36.622 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:24:36.622 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:24:36.624 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:24:36.624 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:24:37.459 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:24:37.459 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:24:37.516 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:24:37.550 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:24:41.757 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:25:18.515 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:25:18.519 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:25:18.519 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:25:18.519 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:25:18.521 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:25:18.522 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:25:19.326 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:25:19.327 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:25:19.383 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:25:19.417 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:25:23.440 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:26:02.916 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:26:02.920 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:26:02.921 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:26:02.922 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:26:02.924 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:26:02.924 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:26:03.889 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:26:03.889 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:26:03.945 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:26:03.980 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:26:08.616 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:26:09.890 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\TestData.xlsx With Sheet Name testSubscribe
+2017/07/21 18:26:09.938 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:26:10.009 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\Locators\Chinese\Chinese.properties
+2017/07/21 18:26:10.011 [ INFO] main (Config.java) - Locators loaded successfully for Chinese language
+2017/07/21 18:26:10.011 [ INFO] main (TestLocalization.java) - Test Subscribe execution started
+2017/07/21 18:26:10.013 [ INFO] main (TestLocalization.java) - Language set for testing is :-Chinese
+2017/07/21 18:26:21.883 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:26:23.905 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:26:23.906 [ INFO] main (TestLocalization.java) - Page loaded successfully
+2017/07/21 18:26:36.070 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:26:38.085 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:26:38.085 [ INFO] main (TestLocalization.java) - Selected language page loaded successfully
+2017/07/21 18:26:52.090 [ INFO] main (TestLocalization.java) - ******Test Subscribe Test Case passed*****
+2017/07/21 18:26:54.122 [ INFO] main (Config.java) - Execution completed
+2017/07/21 18:26:55.455 [ INFO] main (Config.java) - Driver closed successfully
+2017/07/21 18:27:36.979 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:27:36.984 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:27:36.984 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:27:36.985 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:27:36.987 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:27:36.988 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:27:37.803 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:27:37.803 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:27:37.860 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:27:37.895 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:27:42.032 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:27:43.282 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\TestData.xlsx With Sheet Name testSubscribe
+2017/07/21 18:27:43.325 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:27:43.395 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\Locators\Chinese\Chinese.properties
+2017/07/21 18:27:43.396 [ INFO] main (Config.java) - Locators loaded successfully for Chinese language
+2017/07/21 18:27:43.397 [ INFO] main (TestLocalization.java) - Test Subscribe execution started
+2017/07/21 18:27:43.398 [ INFO] main (TestLocalization.java) - Language set for testing is :-Chinese
+2017/07/21 18:27:55.318 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:27:57.336 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:27:57.337 [ INFO] main (TestLocalization.java) - Page loaded successfully
+2017/07/21 18:28:09.773 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:28:11.784 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:28:11.785 [ INFO] main (TestLocalization.java) - Selected language page loaded successfully
+2017/07/21 18:28:12.174 [ INFO] main (TestLocalization.java) - ******Test Subscribe Test Case passed*****
+2017/07/21 18:28:14.002 [ INFO] main (Config.java) - Execution completed
+2017/07/21 18:28:15.319 [ INFO] main (Config.java) - Driver closed successfully
+2017/07/21 18:28:50.165 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/21 18:28:50.169 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/21 18:28:50.170 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/21 18:28:50.170 [ INFO] main (Config.java) - Setting report properties
+2017/07/21 18:28:50.172 [ INFO] main (Config.java) - Report Properties set..
+2017/07/21 18:28:50.172 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/21 18:28:50.962 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:28:50.962 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/21 18:28:51.022 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/21 18:28:51.061 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/21 18:28:55.146 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/21 18:28:56.384 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\TestData.xlsx With Sheet Name testSubscribe
+2017/07/21 18:28:56.484 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/21 18:28:56.557 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\Locators\Chinese\Chinese.properties
+2017/07/21 18:28:56.558 [ INFO] main (Config.java) - Locators loaded successfully for Chinese language
+2017/07/21 18:28:56.558 [ INFO] main (TestLocalization.java) - Test Subscribe execution started
+2017/07/21 18:28:56.560 [ INFO] main (TestLocalization.java) - Language set for testing is :-Chinese
+2017/07/21 18:29:09.695 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:29:11.722 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:29:11.741 [ INFO] main (TestLocalization.java) - Page loaded successfully
+2017/07/21 18:29:21.238 [ INFO] main (SeleniumUtils.java) - Waiting for page to load
+2017/07/21 18:29:23.250 [ INFO] main (SeleniumUtils.java) - Page loaded successfully
+2017/07/21 18:29:23.251 [ INFO] main (TestLocalization.java) - Selected language page loaded successfully
+2017/07/21 18:29:23.646 [ INFO] main (TestLocalization.java) - ******Test Subscribe Test Case passed*****
+2017/07/21 18:29:25.410 [ INFO] main (Config.java) - Execution completed
+2017/07/21 18:29:26.811 [ INFO] main (Config.java) - Driver closed successfully
+2017/07/26 17:41:40.203 [ INFO] main (Config.java) - logger configuration successful.
+2017/07/26 17:41:40.208 [ INFO] main (RunTest.java) - Starting Script Execution.
+2017/07/26 17:41:40.208 [ INFO] main (RunTest.java) - Getting Test cases set for execution
+2017/07/26 17:41:40.209 [ INFO] main (Config.java) - Setting report properties
+2017/07/26 17:41:40.210 [ INFO] main (Config.java) - Report Properties set..
+2017/07/26 17:41:40.210 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\SetTestCases.xlsx With Sheet Name TestCases
+2017/07/26 17:41:41.135 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/26 17:41:41.135 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\config\Test_Configuration.properties
+2017/07/26 17:41:45.498 [ INFO] main (Config.java) - Chrome Driver initialization successful
+2017/07/26 17:41:46.763 [ INFO] main (Config.java) - Execution XML file updated successfully...
+2017/07/26 17:41:46.803 [ INFO] main (RunTest.java) - Sequential execution mode is set
+2017/07/26 17:41:47.101 [ INFO] main (GetData.java) - Reading Excel file C:\TestathonWorkspace\BITestNGFramework\config\SetTestCase\TestData.xlsx With Sheet Name testSubscribe
+2017/07/26 17:41:47.145 [ INFO] main (GetData.java) - No of rows with 'Yes' Option=1
+2017/07/26 17:41:47.216 [ INFO] main (GetData.java) - Reading Properties file C:\TestathonWorkspace\BITestNGFramework\Locators\Chinese\Chinese.properties
+2017/07/26 17:41:47.218 [ INFO] main (Config.java) - Locators loaded successfully for Chinese language
+2017/07/26 17:41:47.219 [ INFO] main (TestLocalization.java) - Test Subscribe execution started
+2017/07/26 17:41:47.221 [ INFO] main (TestLocalization.java) - Language set for testing is :-Chinese
