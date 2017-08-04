@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.TestNG;
 
-import com.adp.bi.tests.TestLocalization;
+import com.adp.bi.tests.TestWorkFrontJobs;
 import com.google.common.collect.Lists;
 
 /**
@@ -16,7 +16,7 @@ import com.google.common.collect.Lists;
 public class RunTest {
 	public static Map<String, String> locators;
 	public static Map<String, String> testconfig;
-	public final static Logger logger = Logger.getLogger(TestLocalization.class.getName());
+	public final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 	public static GetData data = new GetData();
     public static WebDriver driver;
 	/**

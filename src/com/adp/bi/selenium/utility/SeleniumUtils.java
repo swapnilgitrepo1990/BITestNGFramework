@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import com.adp.bi.tests.TestLocalization;
+import com.adp.bi.tests.TestWorkFrontJobs;
 import com.adp.main.config.Constants;
 import com.adp.main.config.RunTest;
 
@@ -21,7 +21,7 @@ import com.adp.main.config.RunTest;
  *
  */
 public class SeleniumUtils {
-	public final static Logger logger = Logger.getLogger(TestLocalization.class.getName());
+	public final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 	static WebDriver driver=RunTest.driver;
 	/**
 	 * @param driver
@@ -57,16 +57,16 @@ public class SeleniumUtils {
 	 * @param element
 	 * @Description This method waits for given element for given time
 	 */
-	public static void explicitWaitForElement(WebDriver driver, By by, int timeout, String element) {
+	public static void explicitWaitForElement(By by, int timeout) {
 		try {
 
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			logger.info("In explicitWaitForElement Function waiting for element " + timeout + " Seconds");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		} catch (Exception e) {
-			logger.info("Not able to find element " + element);
+			logger.info("Not able to find element "+by.toString());
 			logger.info(e.getMessage());
-			Assert.fail("Not able to find element " + element);
+			Assert.fail("Not able to find element "+by.toString());
 
 		}
 	}
@@ -78,13 +78,13 @@ public class SeleniumUtils {
 	 * @param element
 	 * @Description This method waits for given element for given time
 	 */
-	public static void explicitWaitForElement(WebElement element,String elementName) {
+	public static void waitForVisibilityOfElement(WebElement element,String elementName) {
 		try {
 
 			WebDriverWait wait = new WebDriverWait(driver,  Constants.defaultTimeOut);
 			logger.info("Waiting for visibility of element "+elementName+" " + Constants.defaultTimeOut + " Seconds");
 			wait.until(ExpectedConditions.visibilityOf(element));
-			logger.info("Element "+elementName + "is Visible");
+			logger.info("Element "+elementName + " is Visible");
 		} catch (Exception e) {
 			logger.info("Not able to find element " + elementName);
 			logger.info(e.getMessage());
@@ -92,5 +92,37 @@ public class SeleniumUtils {
 
 		}
 	}
+	
+	public static void waitForPresenceOfElement(WebElement element,String elementName) {
+		try {
+
+			WebDriverWait wait = new WebDriverWait(driver,  Constants.defaultTimeOut);
+			logger.info("Waiting for presence of element "+elementName+" " + Constants.defaultTimeOut + " Seconds");
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			logger.info("Element "+elementName + " is Present");
+		} catch (Exception e) {
+			logger.info("Not able to find element " + elementName);
+			logger.info(e.getMessage());
+			Assert.fail("Not able to find element " + elementName);
+
+		}
+	}
+	
+	
+	public static void waitForElementToBeClickable(WebElement element,String elementName) {
+		try {
+
+			WebDriverWait wait = new WebDriverWait(driver,  Constants.defaultTimeOut);
+			logger.info("Waiting for element to be clickable  "+elementName+" " + Constants.defaultTimeOut + " Seconds");
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			logger.info("Element "+elementName + " is Visible");
+		} catch (Exception e) {
+			logger.info("Not able to find element " + elementName);
+			logger.info(e.getMessage());
+			Assert.fail("Not able to find element " + elementName);
+
+		}
+	}
+
 
 }

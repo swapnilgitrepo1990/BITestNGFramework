@@ -16,13 +16,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.adp.bi.tests.TestLocalization;
+import com.adp.bi.selenium.utility.WebEventListener;
+import com.adp.bi.tests.TestWorkFrontJobs;
 
 /**
  * @author Swapnil Sonawane
@@ -31,21 +33,28 @@ import com.adp.bi.tests.TestLocalization;
  */
 
 public class Config {
-	public final static Logger logger = Logger.getLogger(TestLocalization.class.getName());
+	public final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 	static WebDriver driver;
-
+	public static WebEventListener eventListener;
+	public static EventFiringWebDriver e_driver;
+	
+	
 	/**
 	 * @return driver
 	 * @param driverName
 	 * @Description This method returns driver
 	 */
 	public static WebDriver getDriver(String browser) {
+		eventListener = new WebEventListener();
 
 		switch (browser) {
 		case "chrome":
 			try {
 				System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 				driver = new ChromeDriver();
+				e_driver = new EventFiringWebDriver(driver);
+				e_driver.register(eventListener);
+
 				logger.info("Chrome Driver initialization successful");
 			} catch (Exception e) {
 				logger.info("Something went wrong while driver initialization " + e.getMessage());
@@ -81,7 +90,7 @@ public class Config {
 		}
 
 		driver.manage().window().maximize();
-		return driver;
+		return e_driver;
 	}
 
 	/**

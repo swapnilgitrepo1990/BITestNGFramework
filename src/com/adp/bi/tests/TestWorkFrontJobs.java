@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,10 +15,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.adp.bi.selenium.utility.Action;
 import com.adp.bi.selenium.utility.SeleniumUtils;
+import com.adp.bi.selenium.utility.javaUtility;
+import com.adp.bi.web.elements.BackOffice;
 import com.adp.main.config.Config;
 import com.adp.main.config.Constants;
 import com.adp.main.config.RunTest;
+import com.adp.tests.common.functions.CommonTestUtility;
 
 import atu.testng.reports.ATUReports;
 import atu.testng.reports.logging.LogAs;
@@ -25,8 +30,8 @@ import atu.testng.selenium.reports.CaptureScreen;
 import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
 
 
-public class TestLocalization {
-	final static Logger logger = Logger.getLogger(TestLocalization.class.getName());
+public class TestWorkFrontJobs {
+	final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 	WebDriver driver=RunTest.driver;
 	
 	@BeforeMethod
@@ -37,45 +42,60 @@ public class TestLocalization {
 		ATUReports.indexPageDescription = "Test Reports";
 	}
 			
-	@Test(testName="Test Subscribe Functionality",description = "Verify Subscribe Functionality ",dataProvider="testSubscribe",dataProviderClass=TestDataProvider.class)
-	public void testSubscribe(String srno,String runmode,String language,String name,String email) {/*
-		System.out.println("Test Case one with Thread Id:- "
-				+ Thread.currentThread().getId());
+	@Test(testName="Test WorkFront jobs",description = "Test WorkFront jobs Create Portfolio,Copy Project,Upload Project and Announcement",dataProvider="testWorkFrontJobs",dataProviderClass=TestDataProvider.class)
+	public void testWorkFrontJobs(String srno,String runmode,String clientName,String NAN,String EIN,String EINType,String address,String city,String state,String zip) {
+		String randomClientName=clientName+"_"+javaUtility.randomNumber();
+		logger.info("Client name is:-"+randomClientName);
+		CommonTestUtility.LoginToBackOffice("fit2");
+		ATUReports.add("Login successsful in Back office", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		Action.click(BackOffice.operationsLink(),"Operations Link ");
 		
-		Map<String, String> locators=Config.setLanguage(language);
-		logger.info("Test Subscribe execution started");
-		logger.info("Language set for testing is :-"+language);
-		ATUReports.add("Language set for testing is",language, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
-		driver.get(RunTest.testconfig.get("Test_URL"));
-		SeleniumUtils.waitForPageLoad(driver);
-		logger.info("Page loaded successfully");
-		driver.findElement(By.xpath(locators.get("Select_Language"))).click();
-		SeleniumUtils.waitForPageLoad(driver);
-		logger.info("Selected language page loaded successfully");
-		ATUReports.add("language page loaded successfully",language, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		Action.click(BackOffice.clientsetupandmaintenanceLink(),"client setup and maintenance link");
 		
-		WebElement homeMenu=driver.findElement(By.xpath(locators.get("Home_Menu")));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(homeMenu).build().perform();
+		Action.click(BackOffice.addclient(),"Add client button");
+		Action.type(BackOffice.clientName(), randomClientName, "Client Name");
+		Action.type(BackOffice.clientNAN(), NAN, "Client NAN");
+		javaUtility.pause(2);
+		Action.click(BackOffice.addEINButton(), "Add EIN Button");
+		javaUtility.pause(3);
 		
-		driver.get(driver.findElement(By.xpath(locators.get("Contact_us_menu"))).getAttribute("href"));
-	//	WebUtility.explicitWaitForElement(driver, By.xpath(StartTest.locators.get("Contact_us_menu")), 10,"Contact Menu");
-		//driver.findElement(By.xpath(StartTest.locators.get("Contact_us_menu"))).click();
-		logger.info("Clicked on Contact us menu");
-		SeleniumUtils.waitForPageLoad(driver);
-		ATUReports.add("Contact us menu page loaded successfully",language, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		
-		driver.findElement(By.xpath(locators.get("Subscribe_Name"))).sendKeys(name);
-		logger.info("Subscribers Name Entered:-"+"test Subscriber");
-		ATUReports.add("Subscribers Name Entered",name, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		/*if(!BackOffice.EINTextField())
+		{
+			Action.click(BackOffice.addEINButton(), "Add EIN Button");
+			javaUtility.pause(2);
+		}*/
+		Action.click(BackOffice.EINTextField(), "Client EIN");
+		javaUtility.pause(1);
+		Action.type(BackOffice.EINTextField(), EIN, "Client EIN");
+		javaUtility.pause(2);
+		Action.clear(BackOffice.EINTypeTextField(), "EIN Type");
+		javaUtility.pause(2);
+		Action.type(BackOffice.EINTypeTextField(),EINType, "EIN Type");
+		Action.click(BackOffice.EINTextField(), "Client EIN");
 		
-		driver.findElement(By.xpath(locators.get("Subscribe_email"))).sendKeys(email);
-		ATUReports.add("Subscribers Email Entered",email, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
-		logger.info("Subscribers Email Entered:-"+email);
-		logger.info("******Test Subscribe Test Case passed*****");
-		ATUReports.add("Test Case passed", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
-		//driver.findElement(By.xpath(StartTest.locators.get("Subscribe_submit_button"))).click();
-	*/}
+		/*JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", BackOffice.prefferedEINCheckbox());*/
+		Action.click(BackOffice.prefferedEINCheckbox(), "Preferred EIN checkbox");
+		Action.click(BackOffice.EINSubmitButton(),"EIN Submit Button");
+		javaUtility.pause(3);
+		Action.type(BackOffice.address(), address, "Address");
+		Action.type(BackOffice.city(), city, "City");
+		
+		Action.clear(BackOffice.state(),"State");
+		javaUtility.pause(2);
+		Action.type(BackOffice.state(), state, "State");
+		Action.click(BackOffice.address(), "Address Field");
+		Action.type(BackOffice.zip(), zip, "ZIP");
+		
+		Action.click(BackOffice.bypassAddressVerification(),"Bypass address checkbox");
+		Action.click(BackOffice.submitClientButton(),"Submit button");
+		
+		
+		
+	}
+	
+	
 	@Test(testName="Test Blog",description = "Verify Blogs Functionality ",dataProvider="testBlogs",dataProviderClass=TestDataProvider.class)
 	public void testBlogs(String srno,String runmode,String language)
 	{/*

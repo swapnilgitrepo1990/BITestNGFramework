@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><suite name="Localization testing Demo" verbose="1">
+<?xml version="1.0" encoding="UTF-8"?><suite name="Work Front Job Testing" verbose="1">
 <listeners>
 		<listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
 		<listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
@@ -7,9 +7,9 @@
 	</listeners>
    <test name="Test Subscribe Functionality" preserve-order="true">
     <classes>
-      <class name="com.adp.bi.tests.TestLocalization">
+      <class name="com.adp.bi.tests.TestWorkFrontJobs">
         <methods>
-          <include name="testSubscribe"/>
+          <include name="testWorkFrontJobs"/>
           <exclude name="testBlogs"/>
             </methods>
          </class>

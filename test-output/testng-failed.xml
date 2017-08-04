@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Localization testing Demo]">
+<suite name="Failed suite [Work Front Job Testing]">
   <listeners>
     <listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
     <listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
@@ -9,12 +9,12 @@
   </listeners>
   <test name="Test Subscribe Functionality(failed)">
     <classes>
-      <class name="com.adp.bi.tests.TestLocalization">
+      <class name="com.adp.bi.tests.TestWorkFrontJobs">
         <methods>
-          <include name="testSubscribe" invocation-numbers="0 1"/>
+          <include name="testWorkFrontJobs" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.adp.bi.tests.TestLocalization -->
+      </class> <!-- com.adp.bi.tests.TestWorkFrontJobs -->
     </classes>
   </test> <!-- Test Subscribe Functionality(failed) -->
-</suite> <!-- Failed suite [Localization testing Demo] -->
+</suite> <!-- Failed suite [Work Front Job Testing] -->

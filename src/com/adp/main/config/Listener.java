@@ -20,7 +20,7 @@ import org.testng.ITestResult;
 
 import org.testng.Reporter;
 
-import com.adp.bi.tests.TestLocalization;
+import com.adp.bi.tests.TestWorkFrontJobs;
 
 
 /**
@@ -31,7 +31,7 @@ import com.adp.bi.tests.TestLocalization;
 public class Listener implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
 	// This belongs to ISuiteListener and will execute before the Suite start
-	final static Logger logger = Logger.getLogger(TestLocalization.class.getName());
+	final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 	@Override
 
 	public void onStart(ISuite arg0) {

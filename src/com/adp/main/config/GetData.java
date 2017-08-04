@@ -18,7 +18,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
 
-import com.adp.bi.tests.TestLocalization;
+import com.adp.bi.tests.TestWorkFrontJobs;
 
 /**
  * @author Swapnil Sonawane
@@ -28,7 +28,7 @@ import com.adp.bi.tests.TestLocalization;
  */
 public class GetData {
 
-	public final static Logger logger = Logger.getLogger(TestLocalization.class.getName());
+	public final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 
 	/**
 	 * @param fileName

@@ -12,11 +12,11 @@ import com.adp.main.config.GetData;
 public class TestDataProvider {
 	static GetData testData = new GetData();
 
-	@DataProvider(name = "Subscribe Test")
-	public static Object[][] testSubscribe() {
+	@DataProvider(name = "WorkFront Jobs")
+	public static Object[][] testWorkFrontJobs() {
 		Object[][] arrayObject = null;
 		arrayObject = testData
-				.getDataWithYesRunMode(testData.getDataFromExcel(Constants.testDataFile, "testSubscribe"));
+				.getDataWithYesRunMode(testData.getDataFromExcel(Constants.testDataFile, "testWorkFrontJobs"));
 		return arrayObject;
 	}
 
