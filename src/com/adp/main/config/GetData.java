@@ -186,5 +186,65 @@ public class GetData {
 		}
 		return dataWithYesOption;
 	}
+	
+	
+	/**
+	 * @param file
+	 * @param sheetName
+	 * @param rowNumber
+	 * @return data from sheet
+	 * @Description This file reads data from xlsx file and returns in array
+	 */
+	@SuppressWarnings("deprecation")
+	public String[][] getDataFromExcelByRow(String file, String sheetName,int rowNumber) {
+		logger.info("Reading Excel file " + file + " With Sheet Name " + sheetName);
+		String tabarray[][] = null;
+		FileInputStream inputStream = null;
+		try {
+			inputStream = new FileInputStream(new File(file));
+		} catch (FileNotFoundException e) {
+			logger.info("Some issue finding or loading file....!!! " + file + " " + e.getMessage());
+			Assert.fail("Some issue finding or loading file....!!! " + e.getMessage());
+		}
+
+		XSSFWorkbook workbook = null;
+		try {
+			workbook = new XSSFWorkbook(inputStream);
+		} catch (IOException e) {
+			logger.info("Some issue while loading file....!!! " + file + " " + e.getMessage());
+			Assert.fail("Some issue while loading file....!!! " + e.getMessage());
+		}
+		Sheet sheet = workbook.getSheet(sheetName);
+
+		int noOfRows = sheet.getLastRowNum();
+		int noOfColumns = sheet.getRow(0).getLastCellNum();
+		tabarray = new String[1][noOfColumns];
+		Cell cell;
+		int cellCounter = 0;
+		
+		for (int i = 1; i <2; i++) {
+			int colums = sheet.getRow(i).getLastCellNum();
+			for (int ci = 0; ci < colums; ci++) {
+				cell = sheet.getRow(rowNumber).getCell(ci, Row.RETURN_BLANK_AS_NULL);
+				tabarray[i - 1][cellCounter] = getCellValueAsString(cell);
+				cellCounter++;
+			}
+			cellCounter = 0;
+		}
+		try {
+			workbook.close();
+		} catch (IOException e) {
+			logger.info("Some issue while closing file....!!! " + file + " " + e.getMessage());
+			Assert.fail("Some issue while closding file....!!! " + e.getMessage());
+		}
+		try {
+			inputStream.close();
+		} catch (IOException e) {
+			logger.info("Some issue while closing input stream....!!! " + file + " " + e.getMessage());
+			Assert.fail("Some issue while closing input stream....!!! " + e.getMessage());
+		}
+
+		return tabarray;
+	}
 
 }

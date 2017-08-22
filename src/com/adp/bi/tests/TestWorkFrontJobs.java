@@ -31,74 +31,95 @@ import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
 
 
 public class TestWorkFrontJobs {
-	final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
-	WebDriver driver=RunTest.driver;
 	
+	final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
+	
+	public WebDriver driver=Config.getDriver(Constants.browser.toLowerCase());
+	static ATUReports report;
 	@BeforeMethod
 	public void setUp() throws Exception 
 	{
-		
-		ATUReports.setWebDriver(driver);
-		ATUReports.indexPageDescription = "Test Reports";
+		report=new ATUReports();
+		report.setWebDriver(driver);
+		report.indexPageDescription = "Test Reports";
 	}
 			
-	@Test(testName="Test WorkFront jobs",description = "Test WorkFront jobs Create Portfolio,Copy Project,Upload Project and Announcement",dataProvider="testWorkFrontJobs",dataProviderClass=TestDataProvider.class)
+	@Test(description = "Test WorkFront jobs Create Portfolio,Copy Project,Upload Project and Announcement",dataProvider="testWorkFrontJobs",dataProviderClass=TestDataProvider.class)
 	public void testWorkFrontJobs(String srno,String runmode,String clientName,String NAN,String EIN,String EINType,String address,String city,String state,String zip) {
+		System.out.println("Test Case one with Thread Id:- "
+				+ Thread.currentThread().getId());
+		driver.get("http://www.google.com");
+		SeleniumUtils.waitForPageLoad(driver);
 		String randomClientName=clientName+"_"+javaUtility.randomNumber();
 		logger.info("Client name is:-"+randomClientName);
-		CommonTestUtility.LoginToBackOffice("fit2");
+		CommonTestUtility.LoginToBackOffice("fit2",driver,report);
 		ATUReports.add("Login successsful in Back office", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
-		Action.click(BackOffice.operationsLink(),"Operations Link ");
+		Action.click(BackOffice.operationsLink(driver),"Operations Link ",driver);
 		
-		Action.click(BackOffice.clientsetupandmaintenanceLink(),"client setup and maintenance link");
+		Action.click(BackOffice.clientsetupandmaintenanceLink(driver),"client setup and maintenance link",driver);
 		
-		Action.click(BackOffice.addclient(),"Add client button");
-		Action.type(BackOffice.clientName(), randomClientName, "Client Name");
-		Action.type(BackOffice.clientNAN(), NAN, "Client NAN");
-		javaUtility.pause(2);
-		Action.click(BackOffice.addEINButton(), "Add EIN Button");
-		javaUtility.pause(3);
-		
-		
-		/*if(!BackOffice.EINTextField())
-		{
-			Action.click(BackOffice.addEINButton(), "Add EIN Button");
-			javaUtility.pause(2);
-		}*/
-		Action.click(BackOffice.EINTextField(), "Client EIN");
+		Action.click(BackOffice.addclient(driver),"Add client button",driver);
+		Action.type(BackOffice.clientName(driver), randomClientName, "Client Name",driver);
+		Action.type(BackOffice.clientNAN(driver), NAN, "Client NAN",driver);
 		javaUtility.pause(1);
-		Action.type(BackOffice.EINTextField(), EIN, "Client EIN");
-		javaUtility.pause(2);
-		Action.clear(BackOffice.EINTypeTextField(), "EIN Type");
-		javaUtility.pause(2);
-		Action.type(BackOffice.EINTypeTextField(),EINType, "EIN Type");
-		Action.click(BackOffice.EINTextField(), "Client EIN");
-		
-		/*JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", BackOffice.prefferedEINCheckbox());*/
-		Action.click(BackOffice.prefferedEINCheckbox(), "Preferred EIN checkbox");
-		Action.click(BackOffice.EINSubmitButton(),"EIN Submit Button");
+		ATUReports.add("Client name entered", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		Action.click(BackOffice.addEINButton(driver), "Add EIN Button",driver);
 		javaUtility.pause(3);
-		Action.type(BackOffice.address(), address, "Address");
-		Action.type(BackOffice.city(), city, "City");
 		
-		Action.clear(BackOffice.state(),"State");
+		Action.click(BackOffice.EINTextField(driver), "Client EIN",driver);
+		javaUtility.pause(1);
+		Action.type(BackOffice.EINTextField(driver), EIN, "Client EIN",driver);
+		//javaUtility.pause(2);
+		Action.clear(BackOffice.EINTypeTextField(driver), "EIN Type",driver);
+		//javaUtility.pause(2);
+		Action.type(BackOffice.EINTypeTextField(driver),EINType, "EIN Type",driver);
+		Action.click(BackOffice.EINTextField(driver), "Client EIN",driver);
+		
+		
+		SeleniumUtils.moveToElementAndClick(BackOffice.prefferedEINCheckbox(driver), "Preferred EIN checkbox",driver);
+		//Action.click(BackOffice.prefferedEINCheckbox(), "Preferred EIN checkbox");
+		Action.click(BackOffice.EINSubmitButton(driver),"EIN Submit Button",driver);
+		javaUtility.pause(3);
+		Action.type(BackOffice.address(driver), address, "Address",driver);
+		Action.type(BackOffice.city(driver), city, "City",driver);
+		
+		Action.clear(BackOffice.state(driver),"State",driver);
 		javaUtility.pause(2);
-		Action.type(BackOffice.state(), state, "State");
-		Action.click(BackOffice.address(), "Address Field");
-		Action.type(BackOffice.zip(), zip, "ZIP");
+		Action.type(BackOffice.state(driver), state, "State",driver);
+		Action.click(BackOffice.address(driver), "Address Field",driver);
+		Action.type(BackOffice.zip(driver), zip, "ZIP",driver);
 		
-		Action.click(BackOffice.bypassAddressVerification(),"Bypass address checkbox");
-		Action.click(BackOffice.submitClientButton(),"Submit button");
+		SeleniumUtils.moveToElementAndClick(BackOffice.bypassAddressVerification(driver), "Bypass address checkbox",driver);
+		javaUtility.pause(1);
+		Action.click(BackOffice.submitClientButton(driver),"Submit button",driver);
+		logger.info("Client created successfully");
+		javaUtility.pause(5);
 		
-		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,-250)", "");
+		//SeleniumUtils.moveToElement(BackOffice.clientDetailsTab(), "Client details tab");
+		javaUtility.pause(1);
+		Action.click(BackOffice.clientDetailsTab(driver), "Client details tab",driver);
+		 String clientNumber=BackOffice.clientNumberValue(driver).getText();
+		 logger.info("Client Number is "+clientNumber);
+		 Action.click(BackOffice.screeningMethodsTab(driver), "Screening methods tab",driver);
+		 Action.click(BackOffice.addscreeningMethodsButton(driver), "add Screening methods Button",driver);
+		 javaUtility.pause(2);
+		 Action.click(BackOffice.saveScreeningMethodsButton(driver), "Save Screening methods Button",driver);
+		 Action.click(BackOffice.saveScreeningConfirmButton(driver), "Save Screening methods confirm Button",driver);
+		 logger.info("Client creation completed..");
 		
 	}
+	
 	
 	
 	@Test(testName="Test Blog",description = "Verify Blogs Functionality ",dataProvider="testBlogs",dataProviderClass=TestDataProvider.class)
-	public void testBlogs(String srno,String runmode,String language)
-	{/*
+	public void verify(String srno,String runmode,String language)
+	{
+		
+		
+		
+		/*
 		try{
 		Map<String, String> locators=Config.setLanguage(language);
 		logger.info("Language set for testing is :-"+language);

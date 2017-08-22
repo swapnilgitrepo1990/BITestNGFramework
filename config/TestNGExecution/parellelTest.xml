@@ -7,21 +7,22 @@
 		<listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
 		<listener class-name="atu.testng.reports.listeners.MethodListener"/>
 	</listeners>
-   
+   <parameter name="test_param" value="foo"/>
    <test allow-return-values="false" group-by-instances="false" junit="false" name="Test Subscribe Functionality" preserve-order="true" skipfailedinvocationcounts="false">
     <classes>
-      <class name="com.adp.localization.test.TestLocalization">
+      <class name="com.adp.bi.tests.TestWorkFrontJobs">
         <methods>
-          <include name="testSubscribe"/>
+          <include name="testWorkFrontJobs"/>
             </methods>
          </class>
     </classes>
     </test>
+    <parameter name="test_param" value="foo"/>
     <test allow-return-values="false" group-by-instances="false" junit="false" name="Test Blogs Functionality" preserve-order="true" skipfailedinvocationcounts="false">
     <classes>
-      <class name="com.adp.localization.test.TestLocalization">
+      <class name="com.adp.bi.tests.TestWorkFrontJobs">
         <methods>
-             <exclude name="testBlogs"/>
+             <exclude name="testWorkFrontJobs"/>
         </methods>
          </class>
     </classes>

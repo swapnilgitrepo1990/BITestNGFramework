@@ -15,13 +15,13 @@ public class Constants {
 	public static final String testDataFile = workingDir + "\\config\\SetTestCase\\TestData.xlsx";
 	public static final String setTestCaseFile = workingDir + "\\config\\SetTestCase\\SetTestCases.xlsx";
 	public static final String testngXML = workingDir + "\\config\\TestNGExecution\\testNG.xml";
-	public static final String parellelTestngXML = workingDir + "\\config\\TestNGExecution\\parellelTest.xml";
+	public static final String parellelTestngXML = workingDir + "\\config\\TestNGExecution\\test.xml";
 	public static final int runModeIndex = 1;
 	public static final String atuReportProperties=workingDir +"\\config\\ReportConfig\\atu.properties";
 	public static final String chromeDriverPath=workingDir +"\\Drivers\\chromedriver.exe";
 	public static final String gickoDriverPath=workingDir +"\\Drivers\\geckodriver.exe";
 	public static final String ieDriverPath=workingDir +"\\Drivers\\IEDriverServer.exe";
-	public static final int defaultTimeOut = 60;
+	public static final int defaultTimeOut = 120;
 	public static final int maxTimeOut = 120;
 	public static final int minTimeOut = 30;
 	

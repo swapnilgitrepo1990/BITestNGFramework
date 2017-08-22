@@ -18,7 +18,8 @@ public class RunTest {
 	public static Map<String, String> testconfig;
 	public final static Logger logger = Logger.getLogger(TestWorkFrontJobs.class.getName());
 	public static GetData data = new GetData();
-    public static WebDriver driver;
+	
+   // public WebDriver driver;
 	/**
 	 * @param args
 	 * @Description Main method start of framework
@@ -32,7 +33,7 @@ public class RunTest {
 				.getDataWithYesRunMode(data.getDataFromExcel(Constants.setTestCaseFile, "TestCases"));
 		testconfig = GetData.getProperty(Constants.test_config_properties);
 		Constants.browser=testconfig.get("Browser");
-		driver=Config.getDriver(Constants.browser.toLowerCase());	
+		//driver=Config.getDriver(Constants.browser.toLowerCase());	
 		Config.updateXML(mainExcel);
 		TestNG testng = new TestNG();
 		ArrayList<String> suites = Lists.newArrayList();

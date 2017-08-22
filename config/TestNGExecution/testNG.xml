@@ -5,7 +5,8 @@
 		<listener class-name="atu.testng.reports.listeners.MethodListener"/>
 		<listener class-name="com.adp.main.config.CustomReporter"/>
 	</listeners>
-   <test name="Test Subscribe Functionality" preserve-order="true">
+	
+   <test name="Test Work front Functionality" preserve-order="true">
     <classes>
       <class name="com.adp.bi.tests.TestWorkFrontJobs">
         <methods>

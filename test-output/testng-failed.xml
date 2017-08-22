@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Work Front Job Testing]">
+<suite thread-count="2" verbose="10" name="Failed suite [Automation Test Suite]" parallel="tests" data-provider-thread-count="2">
+  <parameter name="test_param" value="2"/>
   <listeners>
     <listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
     <listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
     <listener class-name="atu.testng.reports.listeners.MethodListener"/>
-    <listener class-name="com.adp.main.config.CustomReporter"/>
   </listeners>
-  <test name="Test Subscribe Functionality(failed)">
+  <test name="testWorkFrontJobs_1(failed)" parallel="tests">
+    <parameter name="test_param" value="2"/>
     <classes>
       <class name="com.adp.bi.tests.TestWorkFrontJobs">
         <methods>
           <include name="testWorkFrontJobs" invocation-numbers="0"/>
           <include name="setUp"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- com.adp.bi.tests.TestWorkFrontJobs -->
     </classes>
-  </test> <!-- Test Subscribe Functionality(failed) -->
-</suite> <!-- Failed suite [Work Front Job Testing] -->
+  </test> <!-- testWorkFrontJobs_1(failed) -->
+  <test name="testWorkFrontJobs_0(failed)" parallel="tests">
+    <parameter name="test_param" value="1"/>
+    <classes>
+      <class name="com.adp.bi.tests.TestWorkFrontJobs">
+        <methods>
+          <include name="testWorkFrontJobs" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.adp.bi.tests.TestWorkFrontJobs -->
+    </classes>
+  </test> <!-- testWorkFrontJobs_0(failed) -->
+</suite> <!-- Failed suite [Automation Test Suite] -->
